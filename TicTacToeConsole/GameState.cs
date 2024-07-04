@@ -45,6 +45,8 @@ namespace TicTacToeConsole
             }
         }
 
+        // Overload of MakeMove to allow input of 1 to 9, or 0 to reset game
+        // e.g. 1 = 0,0 , 2 = 0,1 , 3 = 0,2 , 4 = 1,0 , etc.
         public void MakeMove(int input)
         {
             switch (input) {
