@@ -39,7 +39,10 @@ namespace TicTacToeConsole
                     }
                     Console.Write("]");
                     Console.Write(" ");
-                    
+                }
+                if (r == 1)
+                {
+                    Console.Write("    " + CurrentPlayer + "'s turn");
                 }
                 Console.WriteLine();
             }
@@ -122,7 +125,7 @@ namespace TicTacToeConsole
             (int, int)[] diagForward = new[] { (2, 0), (1, 1), (0, 2) };
             (int, int)[] diagBackward = new[] { (0, 0), (1, 1), (2, 2) };
 
-            if (AreSquaresMarked(row, CurrentPlayer)) // returns true if the current player has the whole row marked
+            if (AreSquaresMarked(row, CurrentPlayer))
             {
                 return true;
             }
@@ -162,6 +165,7 @@ namespace TicTacToeConsole
             return false;
         }
 
+        // Sets the grid to the player's chosen move if possible, increments number of turns, progresses the game state
         public void MakeMove(int r, int c)
         {
             if (!CanMakeMove(r, c))
