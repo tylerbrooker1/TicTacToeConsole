@@ -1,8 +1,20 @@
-﻿using System.Transactions;
+﻿using System.Text;
+using System.Transactions;
 using TicTacToeConsole;
 
 int input;
 string playGame = "Y";
+
+string basePath = Directory.GetCurrentDirectory().Split(new string[] { "\\bin" }, StringSplitOptions.None)[0];
+
+Console.WriteLine("Base path: " + basePath);
+
+StringBuilder sb = new StringBuilder();
+sb.Append("log something").AppendLine();
+sb.Append("log something").AppendLine();
+Console.WriteLine(sb.ToString());
+File.AppendAllText(basePath + "\\log.txt", sb.ToString());
+sb.Clear();
 
 GameState game = new GameState();
 

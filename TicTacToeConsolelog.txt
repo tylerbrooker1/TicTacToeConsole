@@ -1,0 +1,4 @@
+log something
+log something
+log something
+log something
