@@ -2,6 +2,7 @@
 using System.IO;
 using System.Text;
 
+// Logging class to record data to a .txt file
 namespace TicTacToeConsole
 {
     public class Logging

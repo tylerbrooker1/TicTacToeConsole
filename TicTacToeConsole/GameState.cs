@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
+// Main game functionality, to be initialised in the Program.cs class
 namespace TicTacToeConsole
 {
     public class GameState
@@ -50,35 +51,36 @@ namespace TicTacToeConsole
 
         // Overload of MakeMove to allow input of 1 to 9, or 0 to reset game
         // e.g. 1 = 0,0 , 2 = 0,1 , 3 = 0,2 , 4 = 1,0 , etc.
-        public void MakeMove(int input)
+        public bool MakeMove(int input)
         {
+            bool successfulMove = false;
             switch (input) {
                 case 1:
-                    MakeMove(0, 0);
+                    successfulMove = MakeMove(0, 0);
                     break;
                 case 2:
-                    MakeMove(0, 1);
+                    successfulMove = MakeMove(0, 1);
                     break;
                 case 3:
-                    MakeMove(0, 2);
+                    successfulMove = MakeMove(0, 2);
                     break;
                 case 4:
-                    MakeMove(1, 0);
+                    successfulMove = MakeMove(1, 0);
                     break;
                 case 5:
-                    MakeMove(1, 1);
+                    successfulMove = MakeMove(1, 1);
                     break;
                 case 6:
-                    MakeMove(1, 2);
+                    successfulMove = MakeMove(1, 2);
                     break;
                 case 7:
-                    MakeMove(2, 0);
+                    successfulMove = MakeMove(2, 0);
                     break;
                 case 8:
-                    MakeMove(2, 1);
+                    successfulMove = MakeMove(2, 1);
                     break;
                 case 9:
-                    MakeMove(2, 2);
+                    successfulMove = MakeMove(2, 2);
                     break;
                 case 0:
                     ResetGameState();
@@ -86,6 +88,7 @@ namespace TicTacToeConsole
                 default:
                     throw new ArgumentOutOfRangeException(nameof(input));
             }
+            return successfulMove;
         }
 
         // Checks if a move can be made
@@ -166,11 +169,11 @@ namespace TicTacToeConsole
         }
 
         // Sets the grid to the player's chosen move if possible, increments number of turns, progresses the game state
-        public void MakeMove(int r, int c)
+        public bool MakeMove(int r, int c)
         {
             if (!CanMakeMove(r, c))
             {
-                return; 
+                return false; 
             }
 
             GameGrid[r, c] = CurrentPlayer;
@@ -184,6 +187,7 @@ namespace TicTacToeConsole
             {
                 SwitchPlayer();
             }
+            return true;
         }
 
         // Resets the game back to a beginning state

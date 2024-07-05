@@ -10,7 +10,6 @@ gameLog.Log("program launched");
 
 while (playGame == "Y")
 {
-    Console.WriteLine("Tic Tac Toe Game");
     gameLog.Log("new game started");
 
     while (!game.GameOver)
@@ -20,10 +19,22 @@ while (playGame == "Y")
         try
         {
             input = Convert.ToInt32(Console.ReadLine());
-            game.MakeMove(input);
-            gameLog.Log("player " + game.CurrentPlayer + " successfully played at square " + input);
+            Console.WriteLine("Input: " + input);
+            
+            if (game.MakeMove(input))
+            {
+                gameLog.Log("player " + game.CurrentPlayer + " successfully played at square " + input);
+            } else if (input == 0)
+            {
+                gameLog.Log("0 pressed, game reset");
+            } else
+            {
+                Console.WriteLine("Invalid move - try again!");
+            }
         }
-        catch { }
+        catch {
+            Console.WriteLine("Invalid input - try again!");
+        }
     }
 
     game.PrintGrid();
@@ -39,7 +50,5 @@ while (playGame == "Y")
     }
 }
 
-//Console.WriteLine("Press any key to exit...");
-//Console.ReadKey();
-gameLog.Log("game ended, app closed");
+gameLog.Log("game ended, program closed");
 Console.WriteLine("DONE");
