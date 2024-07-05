@@ -1,26 +1,17 @@
 ﻿using System.Text;
-using System.Transactions;
 using TicTacToeConsole;
 
 int input;
 string playGame = "Y";
 
-string basePath = Directory.GetCurrentDirectory().Split(new string[] { "\\bin" }, StringSplitOptions.None)[0];
-
-Console.WriteLine("Base path: " + basePath);
-
-StringBuilder sb = new StringBuilder();
-sb.Append("log something").AppendLine();
-sb.Append("log something").AppendLine();
-Console.WriteLine(sb.ToString());
-File.AppendAllText(basePath + "\\log.txt", sb.ToString());
-sb.Clear();
-
 GameState game = new GameState();
+Logging gameLog = new Logging();
+gameLog.Log("program launched");
 
 while (playGame == "Y")
 {
     Console.WriteLine("Tic Tac Toe Game");
+    gameLog.Log("new game started");
 
     while (!game.GameOver)
     {
@@ -30,12 +21,14 @@ while (playGame == "Y")
         {
             input = Convert.ToInt32(Console.ReadLine());
             game.MakeMove(input);
+            gameLog.Log("player " + game.CurrentPlayer + " successfully played at square " + input);
         }
         catch { }
     }
 
     game.PrintGrid();
     Console.WriteLine("Winner: " + game.Winner);
+    gameLog.Log("player " + game.CurrentPlayer + " won");
 
     Console.WriteLine("Play again? Y/N");
     playGame = Console.ReadLine();
@@ -48,5 +41,5 @@ while (playGame == "Y")
 
 //Console.WriteLine("Press any key to exit...");
 //Console.ReadKey();
-
+gameLog.Log("game ended, app closed");
 Console.WriteLine("DONE");
