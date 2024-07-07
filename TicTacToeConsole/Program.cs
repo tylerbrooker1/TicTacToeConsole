@@ -10,6 +10,8 @@ gameLog.Log("program launched");
 
 while (playGame == "Y")
 {
+
+    game.PrintGridNumbers();
     gameLog.Log("new game started");
 
     while (!game.GameOver)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Metrics;
 using System.Reflection;
 
 // Main game functionality, to be initialised in the Program.cs class
@@ -47,6 +48,26 @@ namespace TicTacToeConsole
                 }
                 Console.WriteLine();
             }
+        }
+
+        // Prints the grid with numerical values
+        public void PrintGridNumbers()
+        {
+            int counter = 1;
+            Console.WriteLine("Choose the numbers like this:");
+            for (int r = 0; r < GameGrid.GetLength(0); r++)
+            {
+                for (int c = 0; c < GameGrid.GetLength(1); c++)
+                {
+                    Console.Write("[");
+                    Console.Write(counter);
+                    Console.Write("]");
+                    Console.Write(" ");
+                    counter++;
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
         }
 
         // Overload of MakeMove to allow input of 1 to 9, or 0 to reset game

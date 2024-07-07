@@ -7,3 +7,37 @@
 04/07/2024 21:32:43 - player X successfully played at square 5
 04/07/2024 21:32:43 - player X won
 04/07/2024 21:32:45 - game ended, app closed
+07/07/2024 16:10:43 - program launched
+07/07/2024 16:10:43 - new game started
+07/07/2024 16:11:03 - player O successfully played at square 1
+07/07/2024 16:11:11 - player X successfully played at square 3
+07/07/2024 16:11:15 - player O successfully played at square 5
+07/07/2024 16:11:21 - player X successfully played at square 9
+07/07/2024 16:11:25 - player O successfully played at square 6
+07/07/2024 16:11:39 - player X successfully played at square 4
+07/07/2024 16:11:47 - player O successfully played at square 7
+07/07/2024 16:12:12 - player X successfully played at square 2
+07/07/2024 16:12:14 - player X successfully played at square 8
+07/07/2024 16:12:14 - player X won
+07/07/2024 16:12:22 - game ended, program closed
+07/07/2024 16:13:42 - program launched
+07/07/2024 16:13:42 - new game started
+07/07/2024 16:15:49 - program launched
+07/07/2024 16:15:49 - new game started
+07/07/2024 16:16:14 - program launched
+07/07/2024 16:16:14 - new game started
+07/07/2024 16:16:46 - program launched
+07/07/2024 16:16:46 - new game started
+07/07/2024 16:16:59 - program launched
+07/07/2024 16:16:59 - new game started
+07/07/2024 16:17:07 - player O successfully played at square 5
+07/07/2024 16:17:07 - player X successfully played at square 3
+07/07/2024 16:17:08 - player O successfully played at square 7
+07/07/2024 16:17:08 - player X successfully played at square 4
+07/07/2024 16:17:09 - player O successfully played at square 6
+07/07/2024 16:17:12 - player X successfully played at square 1
+07/07/2024 16:17:13 - player O successfully played at square 2
+07/07/2024 16:17:16 - player X successfully played at square 8
+07/07/2024 16:17:17 - player X successfully played at square 9
+07/07/2024 16:17:17 - player X won
+07/07/2024 16:17:19 - new game started
