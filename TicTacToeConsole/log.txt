@@ -41,3 +41,34 @@
 07/07/2024 16:17:17 - player X successfully played at square 9
 07/07/2024 16:17:17 - player X won
 07/07/2024 16:17:19 - new game started
+07/07/2024 16:21:23 - program launched
+07/07/2024 16:21:23 - new game started
+07/07/2024 16:21:32 - player O successfully played at square 5
+07/07/2024 16:21:33 - player X successfully played at square 6
+07/07/2024 16:21:36 - 0 pressed, game reset
+07/07/2024 16:21:40 - player X successfully played at square 1
+07/07/2024 16:21:41 - player O successfully played at square 5
+07/07/2024 16:21:42 - player X successfully played at square 7
+07/07/2024 16:21:43 - player O successfully played at square 3
+07/07/2024 16:21:45 - 0 pressed, game reset
+07/07/2024 16:25:14 - program launched
+07/07/2024 16:25:14 - new game started
+07/07/2024 16:25:35 - program launched
+07/07/2024 16:25:35 - new game started
+09/07/2024 19:16:33 - program launched
+09/07/2024 19:16:33 - new game started
+09/07/2024 19:19:59 - program launched
+09/07/2024 19:19:59 - new game started
+09/07/2024 19:26:36 - program launched
+09/07/2024 19:26:37 - new game started
+09/07/2024 19:28:53 - program launched
+09/07/2024 19:28:53 - new game started
+09/07/2024 19:41:04 - program launched
+09/07/2024 19:41:04 - new game started
+09/07/2024 19:41:07 - 0 pressed, game reset
+09/07/2024 19:47:55 - program launched
+09/07/2024 19:47:55 - new game started
+09/07/2024 19:50:11 - program launched
+09/07/2024 19:50:11 - new game started
+09/07/2024 19:53:22 - program launched
+09/07/2024 19:53:22 - new game started

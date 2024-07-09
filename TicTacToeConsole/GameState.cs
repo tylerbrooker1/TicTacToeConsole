@@ -113,25 +113,25 @@ namespace TicTacToeConsole
         }
 
         // Checks if a move can be made
-        private bool CanMakeMove(int r, int c)
+        public bool CanMakeMove(int r, int c)
         {
             return !GameOver && GameGrid[r, c] == Player.None;
         }
 
         // Checks if the grid is full
-        private bool IsGridFull()
+        public bool IsGridFull()
         {
             return TurnsPassed == 9;
         }
 
         // Switches players
-        private void SwitchPlayer()
+        public void SwitchPlayer()
         {
             CurrentPlayer = CurrentPlayer == Player.X ? Player.O : Player.X;
         }
 
         // Need to check if a player has won the game - each of the rows/columns/diags would be marked with the same player
-        private bool AreSquaresMarked((int, int)[] squares, Player player)
+        public bool AreSquaresMarked((int, int)[] squares, Player player)
         {
             foreach ((int r, int c) in squares)
             {
@@ -142,7 +142,7 @@ namespace TicTacToeConsole
         }
 
         // Check if the last move was a winning move
-        private bool DidMoveWin(int r, int c)
+        public bool DidMoveWin(int r, int c)
         {
             (int, int)[] row = new[] { (r, 0), (r, 1), (r, 2) };
             (int, int)[] col = new[] { (0, c), (1, c), (2, c) };
@@ -173,7 +173,7 @@ namespace TicTacToeConsole
         }
 
         // Checks if the last move ended the game
-        private bool DidMoveEndGame(int r, int c)
+        public bool DidMoveEndGame(int r, int c)
         {
             if (DidMoveWin(r, c))
             {
